@@ -1,4 +1,4 @@
-name = My Contact
+name = My Module
 description = Custom Functions
 package = Custom
 core = 7.x
