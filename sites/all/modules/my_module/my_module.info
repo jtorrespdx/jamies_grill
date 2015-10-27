@@ -1,0 +1,4 @@
+name = My Contact
+description = Custom Functions
+package = Custom
+core = 7.x
