@@ -1,0 +1,5 @@
+name = Jamies Follow
+description = Custom module for social following icons and links
+package = Custom Modules
+core = 7.x
+files[] = jamies_follow.module
