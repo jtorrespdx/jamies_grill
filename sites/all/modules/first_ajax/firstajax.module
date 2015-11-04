@@ -1,7 +1,7 @@
 <?php
 function firstajax_menu() {
   $items['path-to-ajax/%/%'] = array(
-          'access to arguments' => array('access content'),
+          'access arguments' => array('access content'),
           'page callback' => 'firstajax_ajax_callback',
           'page arguments' => array(1,2),
           'type' => MENU_CALLBACK,
@@ -10,6 +10,7 @@ function firstajax_menu() {
 }
 
 function firstajax_ajax_callback($js, $node_id) {
+  // return 'hello';
   $node = node_load($node_id);
 
   if ($js == 'nojs') {
@@ -22,7 +23,7 @@ function firstajax_ajax_callback($js, $node_id) {
 
   // Here we prepare an ajax command to insert the node's HTML into our div under News -the wrapper.
   $commands = array();
-  $commands[] ajax_command_html('#firstajax-ajax-wrapper', $html);
+  $commands[] = ajax_command_html('#firstajax-ajax-wrapper', $html);
 
   // Render the commands int JSON data format and execute them by printing them to the browser.
   print ajax_render($commands);
