@@ -1,0 +1,10 @@
+<?php
+function firstajax_menu() {
+  $items['path-to-ajax'] = array(
+          'access to arguments' => array('access content'),
+          'page callback' => 'firstajax_ajax_callback',
+          'page arguments' => array(1,2),
+          'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
